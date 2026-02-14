@@ -64,7 +64,8 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
 │   └── application-domains.md     # Domain overview with key results
 │
 ├── comparisons/              # Cross-project comparisons
-│   └── comparison-table.md   #   Side-by-side tables
+│   ├── comparison-table.md   #   Side-by-side tables
+│   └── mechanism-advantages.md  #   When each evolutionary mechanism gives an edge
 │
 └── resources/                # Surveys, tools, and open problems
     ├── surveys.md            #   Academic survey papers
@@ -119,6 +120,7 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
 - [Evolutionary Frameworks](taxonomy/evolutionary-frameworks.md) -- GA, MAP-Elites, island models, etc.
 - [Application Domains](taxonomy/application-domains.md) -- Domain overview with key results
 - [Comparison Table](comparisons/comparison-table.md) -- Side-by-side project comparison
+- [Mechanism Advantages](comparisons/mechanism-advantages.md) -- Which evolutionary mechanism gives an edge and when
 - [Survey Papers](resources/surveys.md) -- Academic surveys on the field
 - [Open Source Tools](resources/open-source.md) -- Available implementations
 - [Open Challenges](resources/challenges.md) -- Unsolved problems in the field
