@@ -15,6 +15,17 @@
 - **Description:** Sample-efficient LLM-driven program evolution
 - **Key Feature:** Novelty-based rejection + bandit-based LLM selection
 
+### GEPA (Reflective Prompt Evolution)
+- **Repo:** [gepa-ai/gepa](https://github.com/gepa-ai/gepa)
+- **License:** Apache 2.0
+- **Description:** Genetic-Pareto prompt evolution with natural-language reflection
+- **Key Feature:** Outperforms GRPO with 35x fewer rollouts; integrated as `dspy.GEPA` in DSPy
+
+### LEVI (Sample-Efficient Evolutionary Search)
+- **Repo:** [ttanv/levi](https://github.com/ttanv/levi)
+- **Description:** Diversity-first, mixed-model evolutionary framework
+- **Key Feature:** 3-6x cost reduction vs frontier-LLM frameworks at matching quality
+
 ### OpenELM
 - **Repo:** [CarperAI/OpenELM](https://github.com/CarperAI/OpenELM)
 - **License:** Open source
@@ -40,6 +51,14 @@
 ### EvoPrompt (Prompt Optimization)
 - **Repo:** [beeevita/EvoPrompt](https://github.com/beeevita/EvoPrompt)
 - **Description:** GA/DE-based prompt evolution
+
+### MASPO (Joint Multi-Agent Prompt Optimization)
+- **Repo:** [wangzx1219/MASPO](https://github.com/wangzx1219/MASPO)
+- **Description:** Evolutionary beam search for joint prompt optimization across interacting agents in LLM multi-agent systems
+
+### BehaveSim (Algorithmic Similarity for LLM-AAD)
+- **Repo:** [RayZhhh/behavesim](https://github.com/RayZhhh/behavesim)
+- **Description:** Measures algorithmic similarity via problem-solving trajectories (PSTrajs); integrates with FunSearch/EoH to promote behavioral diversity
 
 ### OPRO (Prompt Optimization)
 - **Repo:** [google-deepmind/opro](https://github.com/google-deepmind/opro)
@@ -79,6 +98,20 @@
 - **Repo:** [google-deepmind/alphaevolve_repository_of_problems](https://github.com/google-deepmind/alphaevolve_repository_of_problems)
 - **Description:** 67 mathematical problem definitions used in experiments
 
+## Benchmarks
+
+### CreativeBench (Machine Creativity for Code)
+- **Paper:** arXiv:[2603.11863](https://arxiv.org/abs/2603.11863)
+- **Description:** Two subsets (Combo + Explore) targeting combinatorial vs exploratory creativity; uses executable code to distinguish creativity from hallucination via quality × novelty metric
+
+### Metal-Sci (Apple Silicon Kernel Search)
+- **Repo:** [vicgalle/metal-sci-kernels](https://github.com/vicgalle/metal-sci-kernels)
+- **Description:** 10 scientific Apple Silicon Metal compute kernels (stencils, n-body, Boltzmann, MD, PDE, FFT) with roofline-anchored fitness; includes held-out generalization-size gate
+
+### GAMBIT (Multi-Agent Adversarial Robustness)
+- **Paper:** arXiv:[2605.09027](https://arxiv.org/abs/2605.09027)
+- **Description:** Co-evolved imposter/detector benchmark for LLM multi-agent systems; 27,804 labeled instances spanning 240 imposter strategies
+
 ## Getting Started Guide
 
 **If you want to...**
@@ -86,7 +119,8 @@
 | Goal | Recommended Tool |
 |---|---|
 | Evolve programs/algorithms | OpenEvolve or ShinkaEvolve |
-| Optimize prompts | EvoPrompt or OPRO |
+| Achieve frontier results at lower cost | LEVI or EvoX |
+| Optimize prompts | GEPA (via DSPy), EvoPrompt, or OPRO |
 | Design heuristics for optimization | ReEvo or EoH |
 | Search neural architectures | LLMatic |
 | Design reward functions | Eureka |

@@ -22,6 +22,10 @@
 | [Darwin Godel Machine](../projects/darwin-godel-machine.md) | Sakana AI | 2025 | Agent source code | MAP-Elites | Foundation models | Yes | arXiv |
 | [OpenEvolve](../projects/openevolve.md) | Community | 2025 | Code (AlphaEvolve clone) | MAP-Elites + Islands | Any (OpenAI API) | Yes | -- |
 | [OpenELM](../projects/openelm.md) | CarperAI | 2023 | Code/prompts (library) | MAP-Elites | Any (LangChain) | Yes | Workshop |
+| [GEPA](../projects/gepa.md) | UC Berkeley/Stanford | 2025 | Prompts | Genetic-Pareto + reflection | Any | Yes (DSPy) | arXiv |
+| [EvoX](../projects/evox.md) | UC Berkeley | 2026 | Solutions + search strategy (meta) | Co-evolution | Any | -- | arXiv |
+| [LEVI](../projects/levi.md) | Independent | 2026 | Code / prompts | Diversity-first + mutation routing | Mix of small + large | Yes | arXiv |
+| [CodeEvolve (Salesforce)](../projects/code-evolve.md) | Salesforce | 2026 | Java / Apex code | OpenEvolve + MCTS | Any | -- | arXiv |
 
 ## By Scale of Impact
 
@@ -34,11 +38,14 @@
 1. **FunSearch** -- Published in Nature, first LLM-driven math discovery
 2. **AlphaEvolve** -- Improved on Strassen's algorithm after 56 years
 3. **ShinkaEvolve** -- Won ICFP 2025 Programming Contest
+4. **EvoX** -- First framework to outperform AlphaEvolve / OpenEvolve / GEPA / ShinkaEvolve on the majority of ~200 tasks via meta-evolution
 
 ### Framework / Tool Impact
 1. **OpenEvolve** -- Most accessible open implementation of AlphaEvolve
 2. **OpenELM** -- General-purpose QD+LLM library
 3. **ReEvo** -- Ready-to-use heuristic evolution for combinatorial optimization
+4. **GEPA** -- De facto baseline for prompt evolution (DSPy module, widely benchmarked in 2026)
+5. **LEVI** -- 3-6x cost reduction at frontier-level performance via diversity-first search
 
 ## By Sample Efficiency
 
@@ -54,7 +61,7 @@
 ## By Openness
 
 ### Fully Open Source
-ELM/OpenELM, FunSearch, EvoPrompt, OPRO, ReEvo, EoH, LLaMEA, Eureka, ShinkaEvolve, Darwin Godel Machine, AI Scientist, OpenEvolve
+ELM/OpenELM, FunSearch, EvoPrompt, OPRO, ReEvo, EoH, LLaMEA, Eureka, ShinkaEvolve, Darwin Godel Machine, AI Scientist, OpenEvolve, GEPA, LEVI
 
 ### Partially Open (Results/Problems Only)
 AlphaEvolve

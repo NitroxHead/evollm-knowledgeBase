@@ -99,6 +99,28 @@ Papers where LLM+evolution methods designed heuristics for NP-hard optimization 
 
 ---
 
+## 2026 LLM-AHD Framework Wave
+
+A large family of LLM-based Automated Heuristic Design (LLM-AHD) frameworks appeared in early 2026, each targeting a different limitation of the prior generation (EoH, ReEvo, FunSearch). Most evaluate on the same TSP / Online BPP / CVRP / FJSP / MIS substrate.
+
+| Framework | Key idea | Reference |
+|---|---|---|
+| **HMACE** | Multi-agent (Proposer/Generator/Evaluator/Reflector) collaboration | arXiv:[2605.07214](https://arxiv.org/abs/2605.07214) |
+| **BEAM** | Bi-level GA (high-level structure) + MCTS (low-level placeholders); beats KaMIS on MIS | arXiv:[2604.12898](https://arxiv.org/abs/2604.12898) |
+| **A2DEPT** | Tree-structured evolution over full algorithms (not just code components) | arXiv:[2604.24043](https://arxiv.org/abs/2604.24043) |
+| **AHD Agent** | Tool-using RL-trained agent that retrieves targeted runtime evidence | arXiv:[2605.08756](https://arxiv.org/abs/2605.08756) |
+| **LaF-MCTS** | Three-tier hierarchical MCTS for large-scale CVRP (1000+ nodes) | arXiv:[2605.03339](https://arxiv.org/abs/2605.03339) |
+| **ReVEL** | Multi-turn reflective evolution with performance-profile grouping | arXiv:[2604.04940](https://arxiv.org/abs/2604.04940) |
+| **EvoStage** | Stagewise decomposition; beats human-expert designs for Adam scheduling and BO acquisition functions | arXiv:[2603.07970](https://arxiv.org/abs/2603.07970) |
+| **DyACE** | Dynamic co-evolution with receding-horizon control for perturbative heuristics | arXiv:[2603.13344](https://arxiv.org/abs/2603.13344) |
+| **DSevolve** | Quality-diverse rule portfolio for dynamic shop-floor scheduling | arXiv:[2603.27628](https://arxiv.org/abs/2603.27628) |
+| **CoupleEvo** | Coupled-subproblem heuristic evolution | arXiv:[2605.06341](https://arxiv.org/abs/2605.06341) |
+| **Teacher-Aware Evolution** | Uses RL-trained policy as behavioral teacher for heuristic search | arXiv:[2605.10634](https://arxiv.org/abs/2605.10634) |
+
+**Trend:** The field has converged on multi-agent / multi-stage / tool-using designs as the next step beyond single-loop FunSearch/EoH-style evolution. **BEAM** stands out for producing a heuristic that outperforms KaMIS, a long-standing SOTA Maximum Independent Set solver.
+
+---
+
 ## Key Papers
 
 | Paper | Year | Venue | Method | Problems Solved |

@@ -57,6 +57,53 @@ AlphaEvolve discovered a complex 19-variable gadget that established the new bou
 
 ---
 
+## Multi-Agent Reinforcement Learning Algorithms
+
+**Problem:** Discover new algorithms for imperfect-information games -- counterfactual regret minimization (CFR) and policy-space response oracles (PSRO).
+
+| Algorithm Discovered | Family | Status |
+|---|---|---|
+| **VAD-CFR** (Volatility-Adaptive Discounted CFR) | CFR | Competitive with SOTA across 18 games |
+| **SHOR-PSRO** (Smoothed Hybrid Optimistic Regret PSRO) | PSRO | Competitive with SOTA across 18 games |
+| **WOP-CFR** (Warm-started Optimistic Predictive CFR) | Distilled minimal solver | **Superior generalization with reduced complexity** |
+| **PM-PSRO** (Projection Matching PSRO) | Distilled minimal solver | **Superior generalization with reduced complexity** |
+
+**Evaluation suite:** 18 games -- Poker, Goofspiel, Liar's Dice, Blotto, Battleship variants.
+
+**Method:** AlphaEvolve searched the algorithmic design space; the authors then distilled the LLM's discoveries to their fundamental algorithmic cores, producing minimal solvers with better generalization.
+
+**Paper:** Li, Schultz, Hennes, Lanctot, "Discovering Multiagent Learning Algorithms with Large Language Models," arXiv:[2602.16928](https://arxiv.org/abs/2602.16928), 2026.
+
+---
+
+## Code-Space Response Oracles (Interpretable MARL Policies)
+
+**Problem:** Replace black-box neural-net response oracles in PSRO with executable code policies.
+
+| Approach | Result |
+|---|---|
+| CSRO with AlphaEvolve as the oracle | Competitive with neural-net baselines |
+| Output | Human-readable, interpretable code policies |
+
+**Paper:** Hennes, Li, Schultz, Lanctot, "Code-Space Response Oracles: Generating Interpretable Multi-Agent Policies with Large Language Models," arXiv:[2603.10098](https://arxiv.org/abs/2603.10098), 2026.
+
+---
+
+## Lexical Retrieval Algorithm Discovery (RankEvolve)
+
+**Problem:** Improve first-stage lexical retrieval algorithms (BM25, query likelihood with Dirichlet smoothing) -- previously progressed only via parameter tuning and human intuition.
+
+| Benchmark | Result |
+|---|---|
+| 12 IR datasets (BEIR + BRIGHT) | Evolved algorithms outperform seeds (BM25 / QL+Dirichlet) |
+| Transfer to TREC DL 19, DL 20 | Strong transfer |
+
+**Method:** RankEvolve, built on AlphaEvolve. Candidate ranking algorithms represented as executable code, iteratively mutated/recombined based on retrieval-quality fitness.
+
+**Paper:** Nian, Li, Park, Fang, "RankEvolve: Automating the Discovery of Retrieval Algorithms via LLM-Driven Evolution," arXiv:[2602.16932](https://arxiv.org/abs/2602.16932), 2026.
+
+---
+
 ## FlashAttention Kernel Optimization
 
 **Problem:** Optimize the FlashAttention kernel implementation in Transformer models.
@@ -111,3 +158,5 @@ AlphaEvolve modified compiler-generated IR code to achieve these speedups.
 | FlashAttention | AlphaEvolve | 32.5% kernel speedup |
 | Gemini training | AlphaEvolve | 23% kernel speedup, 1% total training reduction |
 | TPU design | AlphaEvolve | Optimized circuits in production hardware |
+| MARL (CFR/PSRO) | AlphaEvolve | 4 new algorithms competitive with SOTA, 2 distilled minimal solvers |
+| Lexical IR | RankEvolve | New ranking algorithms outperforming BM25 on BEIR/BRIGHT |

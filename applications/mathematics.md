@@ -221,6 +221,77 @@ Demonstrated that FunSearch generalizes across combinatorial and number-theoreti
 
 ---
 
+## Ramsey Numbers (Improved Lower Bounds)
+
+**Problem:** Determine the minimum number of vertices needed to guarantee a monochromatic clique under any 2-edge-coloring.
+
+| Number | Previous Best | New Lower Bound | Method | Reference |
+|---|---|---|---|---|
+| R(3, 13) | 60 | **61** | AlphaEvolve | arXiv:2603.09172 |
+| R(3, 18) | 99 | **100** | AlphaEvolve | arXiv:2603.09172 |
+| R(4, 13) | 138 | **139** | AlphaEvolve | arXiv:2603.09172 |
+| R(4, 14) | 147 | **148** | AlphaEvolve | arXiv:2603.09172 |
+| R(4, 15) | 158 | **159** | AlphaEvolve | arXiv:2603.09172 |
+| R(4, 16) | 170 | **174** | AlphaEvolve | arXiv:2603.09172 |
+| R(4, 18) | 205 | **209** | AlphaEvolve | arXiv:2603.09172 |
+| R(4, 19) | 213 | **219** | AlphaEvolve | arXiv:2603.09172 |
+| R(4, 20) | 234 | **237** | AlphaEvolve | arXiv:2603.09172 |
+
+**Significance:** Virtually all known Ramsey lower bounds are derived computationally with bespoke search algorithms, each producing a handful of results. AlphaEvolve is a **single meta-algorithm** that yields a search algorithm for all of these results -- and recovers known optimal lower bounds across many other cases.
+
+**Paper:** Nagda, Raghavan, Thakurta, "Reinforced Generation of Combinatorial Structures: Ramsey Numbers," arXiv:[2603.09172](https://arxiv.org/abs/2603.09172), 2026.
+
+---
+
+## Zarankiewicz Numbers (Bipartite Extremal Graph Theory)
+
+**Problem:** Z(m, n, s, t) is the maximum number of edges in a bipartite graph G_{m,n} with no complete K_{s,t} bipartite subgraph.
+
+| Parameter | Previous | New Result | Method | Reference |
+|---|---|---|---|---|
+| Z(11, 21, 3, 3) | -- | **= 116** (exact) | OpenEvolve | arXiv:2605.01120 |
+| Z(11, 22, 3, 3) | -- | **= 121** (exact) | OpenEvolve | arXiv:2605.01120 |
+| Z(12, 22, 3, 3) | -- | **= 132** (exact) | OpenEvolve | arXiv:2605.01120 |
+| Plus 41 additional lower bounds | -- | improved | OpenEvolve | arXiv:2605.01120 |
+
+**Cost:** Less than **$30 per parameter combination** -- demonstrating that LLM-guided evolutionary search can be inexpensive and reproducible for combinatorial discovery.
+
+**Paper:** Bhan, Nobili, Langer, "New Bounds for Zarankiewicz Numbers via Reinforced LLM Evolutionary Search," arXiv:[2605.01120](https://arxiv.org/abs/2605.01120), 2026.
+
+---
+
+## Random Offerer Mechanism (Bilateral Trade, Game Theory)
+
+**Problem:** Determine the worst-case ratio of first-best gains-from-trade to those of the Random-Offerer mechanism in bilateral trade.
+
+| Source | Lower Bound on Ratio | Reference |
+|---|---|---|
+| Original conjecture | <= 2 | -- |
+| Cai et al. | > 2 | -- |
+| Babaioff et al. | ~ 2.02 | -- |
+| AlphaEvolve | **>= 2.0749** | arXiv:2603.08679 |
+
+**Significance:** AI-guided evolutionary search over the space of value distributions identified a new worst-case instance, widening the known efficiency gap.
+
+**Paper:** Cai, Gupta, Li, Mehta, "A New Lower Bound for the Random Offerer Mechanism in Bilateral Trade using AI-Guided Evolutionary Search," arXiv:[2603.08679](https://arxiv.org/abs/2603.08679), 2026.
+
+---
+
+## R-Equivalence on Cubic Surfaces (AI-Assisted Proof)
+
+**Problem:** Determine R-equivalence on smooth cubic surfaces over p-adic fields with all-Eckardt reductions.
+
+| Setting | Result | AI Role |
+|---|---|---|
+| 2-adic surfaces, all-Eckardt reductions | R-equivalence is trivial or exponent 2 | AlphaEvolve + Gemini 3 Deep Think |
+| Diagonal cubic X^3+Y^3+Z^3+\zeta_3 T^3=0 over Q_2(\zeta_3) | Triviality confirmed (answers long-standing Manin question, 1972) | AI-assisted |
+
+**Paper:** Kanevsky, Salazar, Harvey, "R-equivalence on Cubic Surfaces I: Existing Cases with Non-Trivial Universal Equivalence," arXiv:[2603.19215](https://arxiv.org/abs/2603.19215), 2026.
+
+**Note:** The authors document the timeline and nature of AI use, describing this as the first in a series of works derived from a year of interactions with generative AI models. AlphaEvolve assisted exploration; Gemini 3 Deep Think proved many of the supporting lemmas.
+
+---
+
 ## 67 Open Problems (Comprehensive Study)
 
 AlphaEvolve was tested on 67 open problems spanning analysis, combinatorics, geometry, and number theory in collaboration with Terence Tao and Javier Gomez-Serrano.
@@ -238,8 +309,10 @@ AlphaEvolve was tested on 67 open problems spanning analysis, combinatorics, geo
 
 | Domain | Discoveries | Key Method |
 |---|---|---|
-| Combinatorics | Cap sets, Erdos overlap, kissing number | FunSearch, AlphaEvolve |
+| Combinatorics | Cap sets, Erdos overlap, kissing number, Ramsey, Zarankiewicz | FunSearch, AlphaEvolve, OpenEvolve |
 | Geometry/Packing | Circle, hexagon, cube, sofa | AlphaEvolve, ShinkaEvolve, EoH |
 | Algebra | Matrix multiplication, Kakeya/Nikodym sets | AlphaEvolve |
 | Analysis | Autocorrelation inequalities | AlphaEvolve, CodeEvolve, TTT-Discover |
-| Graph Theory | Shannon capacity, corners problem | FunSearch |
+| Graph Theory | Shannon capacity, corners, bipartite extremal | FunSearch, OpenEvolve |
+| Game Theory / Econ | Bilateral trade lower bound | AlphaEvolve |
+| Algebraic Geometry | R-equivalence on cubic surfaces | AlphaEvolve + Gemini Deep Think |

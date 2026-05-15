@@ -94,6 +94,40 @@ AlphaEvolve modified compiler-generated IR code.
 
 ---
 
+## Cache Replacement Policies (ArchAgent)
+
+**Problem:** Design new state-of-the-art cache replacement policies (not just parameter tuning -- new mechanisms and logic).
+
+| Workload | Time Budget | Improvement over Prior SoTA | Note |
+|---|---|---|---|
+| Public multi-core Google Workload Traces | 2 days, no human intervention | **5.3% IPC speedup** | New mechanism architected automatically |
+| SPEC06 (single-core, heavily explored) | 18 days | **0.9% IPC speedup** | Comparable "winning margin" to prior SoTA, achieved 3-5x faster |
+| SPEC06 with post-silicon hyperspecialization | -- | **2.4% IPC speedup** | Runtime parameter tuning by agent |
+
+**Method:** ArchAgent, built on AlphaEvolve.
+
+**Notable side finding:** The agent discovered and exploited a loophole in a popular microarchitectural simulator ("simulator escape") -- a consequence of these tools having been designed for human researchers acting in good faith.
+
+**Paper:** Gupta, Jain, Gonzalez, Novikov, Huang, Balog, Eisenberger, Shirobokov, Vũ, Dixon, Nikolić, Ranganathan, Karandikar, "ArchAgent: Agentic AI-driven Computer Architecture Discovery," arXiv:[2602.22425](https://arxiv.org/abs/2602.22425), 2026.
+
+---
+
+## Radar Resource Allocation for Multi-Target Tracking
+
+**Problem:** Real-time power allocation in radar systems for multi-target tracking.
+
+| Metric | Result |
+|---|---|
+| Tracking accuracy | Average relative loss only **1.51%** vs iterative optimal solver |
+| Speedup | **Over three orders of magnitude** vs conventional iterative solvers |
+| Form | Closed-form, interpretable scoring function |
+
+**Method:** AlphaEvolve evolves a compact symbolic scoring function over physically inspired features, with a deterministic constraint-satisfying transformation.
+
+**Paper:** Hou, Pu, Yan, Zhou, Liu, "Discover Fast Power Allocation Solution for Multi-Target Tracking via AlphaEvolve Evolution," arXiv:[2605.01794](https://arxiv.org/abs/2605.01794), 2026.
+
+---
+
 ## TPU Hardware Design
 
 **Problem:** Optimize Verilog arithmetic circuits for TPU matrix multiplication units.
@@ -121,5 +155,8 @@ AlphaEvolve modified compiler-generated IR code.
 | Gemini training | AlphaEvolve | 1% training reduction | Production |
 | FlashAttention | AlphaEvolve | 32.5% speedup | Verified |
 | TPU design | AlphaEvolve | Area/power reduction | In upcoming TPU |
+| Cache replacement (ArchAgent) | AlphaEvolve | 5.3% IPC speedup | Research |
+| Radar power allocation | AlphaEvolve | 1000x speedup, near-optimal | Research |
+| Enterprise Java hotspots | CodeEvolve (Salesforce) | 15.22x speedup avg | Research |
 
 **Note:** The "Barbarians at the Gate" paper (arXiv:2510.06189) is particularly notable for demonstrating that OpenEvolve can achieve significant systems optimizations for < $10 in LLM API costs.

@@ -27,7 +27,7 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
 ```
 .
 ├── README.md
-├── projects/                 # Methods & tools (18 profiles)
+├── projects/                 # Methods & tools (22 profiles)
 │   ├── alphaevolve.md        #   Google DeepMind
 │   ├── funsearch.md          #   Google DeepMind
 │   ├── elm.md                #   OpenAI (foundational)
@@ -45,7 +45,11 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
 │   ├── llamea.md             #   Leiden University
 │   ├── darwin-godel-machine.md  # Sakana AI
 │   ├── evo-model-merge.md    #   Sakana AI
-│   └── ai-scientist.md       #   Sakana AI
+│   ├── ai-scientist.md       #   Sakana AI
+│   ├── gepa.md               #   UC Berkeley / Stanford (prompt evolution)
+│   ├── evox.md               #   UC Berkeley (meta-evolution)
+│   ├── levi.md               #   Independent (sample-efficient)
+│   └── code-evolve.md        #   Salesforce (multi-language code optimization)
 │
 ├── applications/             # Applied results by domain (30+ papers)
 │   ├── mathematics.md        #   Cap sets, matrix mult, kissing number, packing...
@@ -98,20 +102,23 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
 | Sakana AI | [ShinkaEvolve](projects/shinkaevolve.md), [Darwin Godel Machine](projects/darwin-godel-machine.md), [Evo Model Merge](projects/evo-model-merge.md), [AI Scientist](projects/ai-scientist.md) |
 | OpenAI / CarperAI | [ELM](projects/elm.md), [OpenELM](projects/openelm.md) |
 | NVIDIA | [Eureka](projects/eureka.md) |
+| UC Berkeley / Stanford | [GEPA](projects/gepa.md), [EvoX](projects/evox.md) |
+| Salesforce | [CodeEvolve](projects/code-evolve.md) |
 | Academia | [ReEvo](projects/reevo.md), [EvoPrompt](projects/evoprompt.md), [EoH](projects/eoh.md), [LLMatic](projects/llmatic.md), [LLaMEA](projects/llamea.md), [EvoPrompting](projects/evoprompting.md) |
-| Community | [OpenEvolve](projects/openevolve.md) |
+| Community / Independent | [OpenEvolve](projects/openevolve.md), [LEVI](projects/levi.md) |
 
 #### By What Is Being Evolved
 
 | Category | Projects |
 |---|---|
-| Programs / Algorithms | [AlphaEvolve](projects/alphaevolve.md), [FunSearch](projects/funsearch.md), [ShinkaEvolve](projects/shinkaevolve.md), [ELM](projects/elm.md), [LLaMEA](projects/llamea.md), [EoH](projects/eoh.md) |
+| Programs / Algorithms | [AlphaEvolve](projects/alphaevolve.md), [FunSearch](projects/funsearch.md), [ShinkaEvolve](projects/shinkaevolve.md), [ELM](projects/elm.md), [LLaMEA](projects/llamea.md), [EoH](projects/eoh.md), [CodeEvolve](projects/code-evolve.md), [LEVI](projects/levi.md) |
 | Heuristics for Optimization | [ReEvo](projects/reevo.md), [EoH](projects/eoh.md) |
-| Text Prompts | [EvoPrompt](projects/evoprompt.md), [Promptbreeder](projects/promptbreeder.md), [OPRO](projects/opro.md) |
+| Text Prompts | [EvoPrompt](projects/evoprompt.md), [Promptbreeder](projects/promptbreeder.md), [OPRO](projects/opro.md), [GEPA](projects/gepa.md) |
 | Neural Architectures | [EvoPrompting](projects/evoprompting.md), [LLMatic](projects/llmatic.md) |
 | Reward Functions | [Eureka](projects/eureka.md) |
 | Models Themselves | [Evo Model Merge](projects/evo-model-merge.md) |
 | Agent Source Code (Self) | [Darwin Godel Machine](projects/darwin-godel-machine.md) |
+| Search Strategy Itself (Meta) | [EvoX](projects/evox.md) |
 
 ### Conceptual Resources
 
@@ -139,6 +146,12 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
 | SWE-bench 20% → 50% via self-modification | Darwin Godel Machine | 2025 |
 | Silver Humies Award (human-competitive results) | LLaMEA | 2025 |
 | 8% drug molecule optimization improvement | Chemlactica | 2025 |
+| New lower bounds for 9 classical Ramsey numbers | AlphaEvolve | 2026 |
+| 3 new exact + 41 improved Zarankiewicz numbers (<$30 each) | OpenEvolve | 2026 |
+| 5.3% IPC speedup on SOTA cache replacement policy | ArchAgent (AlphaEvolve) | 2026 |
+| Outperforms AlphaEvolve/OpenEvolve/GEPA/ShinkaEvolve on majority of ~200 tasks | EvoX | 2026 |
+| 35x cost reduction vs frontier-LLM frameworks | LEVI | 2026 |
+| GEPA outperforms GRPO (RL) on 6 tasks with 35x fewer rollouts | GEPA | 2025 |
 
 ## Timeline
 
@@ -166,9 +179,17 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
   │   ── AlphaEvolve + Terence Tao ─── 67 open math problems
   │   ── Systems applications (UC Berkeley) ─── <$10 for 13x speedups
   │   ── Chemlactica ─── Drug discovery via LLM+evolution
+  │   ── GEPA (UC Berkeley) ─── Prompt evolution beats RL with 35x fewer rollouts
   │
 2026  ── TTT-Discover ─── New SOTA on Erdos overlap + autocorrelation
-      ── Field expanding into materials, photonics, biology...
+  │   ── EvoX (UC Berkeley) ─── Meta-evolution dominates prior frameworks
+  │   ── LEVI ─── Sample-efficient: 3-6x cheaper than frontier baselines
+  │   ── AlphaEvolve Ramsey numbers ─── 9 improved classical lower bounds
+  │   ── OpenEvolve Zarankiewicz ─── 3 exact + 41 improved bounds at <$30 each
+  │   ── ArchAgent ─── SOTA cache replacement policy in 2 days
+  │   ── Salesforce CodeEvolve ─── 15x speedup on enterprise Java hotspots
+  │   ── AI CFD Scientist / CMBEvolve / CVEvolve ─── New scientific-discovery domains
+  │   ── MARL discovery ─── 4 new CFR/PSRO algorithms via AlphaEvolve
 ```
 
 ## Contributing

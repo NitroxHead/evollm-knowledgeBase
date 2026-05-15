@@ -95,6 +95,48 @@ Papers where LLM+evolution methods contributed to materials science, chemistry, 
 
 ---
 
+## Autonomous CFD Discovery (AI CFD Scientist)
+
+**Problem:** Span the full scientific-discovery loop for computational fluid dynamics -- ideation, validated execution, physics-aware verification, source-code modification, and figure-grounded writing -- with vision-language gates that catch silent physical failures.
+
+| Result | Metric |
+|---|---|
+| Spalart-Allmaras runtime correction discovered autonomously | **7.89% reduction** in lower-wall Cf RMSE vs DNS on periodic hill (Re_h=5600) |
+| Silent failures caught by vision-language gate | **14 of 16** missed by solver-level checks |
+
+**Paper:** Somasekharan, Pathak, Dhanakoti, Zhang, Yue, Zhu, Pan, "AI CFD Scientist: Toward Open-Ended Computational Fluid Dynamics Discovery with Physics-Aware AI Agents," arXiv:[2605.06607](https://arxiv.org/abs/2605.06607), 2026.
+
+---
+
+## Cosmology (CMBEvolve / CosmoEvolve)
+
+**Problem:** Autonomous scientific discovery in cosmology.
+
+| System | Target | Result |
+|---|---|---|
+| **CMBEvolve** | Quantitative objectives via LLM-guided code evolution + tree search | Iteratively improves benchmark on weak-lensing OOD detection |
+| **CosmoEvolve** | Open-ended workflows via a virtual multi-agent research lab | Identifies non-trivial pair- and scale-dependent behaviour in ACT DR6 data |
+
+**Paper:** Xu, Borrett, "Beyond AI as Assistants: Toward Autonomous Discovery in Cosmology," arXiv:[2605.14791](https://arxiv.org/abs/2605.14791), 2026.
+
+---
+
+## Scientific Image Processing (CVEvolve)
+
+**Problem:** Autonomous algorithm discovery for unstructured scientific imaging -- noisy, high-dynamic-range, sparsely-labeled data common in x-ray and microscopy experiments.
+
+| Task | Result |
+|---|---|
+| X-ray fluorescence microscopy image registration | Improved baseline |
+| Bragg peak detection | Improved baseline |
+| High-energy diffraction microscopy segmentation | Improved baseline |
+
+**Method:** CVEvolve -- multi-round LLM-driven search with lineage-aware stochastic sampling, holdout testing to identify candidates that generalize better than later over-optimized alternatives. Zero-code interface for domain scientists.
+
+**Paper:** Du, Yin, Luo, Beniwal, Tang, Sharma, Cherukara (Argonne National Lab), "CVEvolve: Autonomous Algorithm Discovery for Unstructured Scientific Data Processing," arXiv:[2605.11359](https://arxiv.org/abs/2605.11359), 2026.
+
+---
+
 ## Autonomous Scientific Discovery (AI Scientist)
 
 **Problem:** Fully automated open-ended scientific research.
@@ -119,3 +161,6 @@ Papers where LLM+evolution methods contributed to materials science, chemistry, 
 | Photonics/optics | LLaMEA | Matches specialized methods |
 | Automotive engineering | LLaMEA-BO | 19/24 BBOB functions |
 | General science | AI Scientist v2 | First AI peer-reviewed paper |
+| CFD turbulence modeling | AI CFD Scientist | 7.89% Cf RMSE reduction, vision-language gates |
+| Cosmology | CMBEvolve / CosmoEvolve | Autonomous ACT DR6 data analysis |
+| Scientific imaging | CVEvolve | Zero-code algorithm discovery for x-ray microscopy |

@@ -41,6 +41,24 @@
 ### Awesome-LLM-Evolution
 - Search GitHub for community-maintained lists tracking papers in this area
 
+## Methodology and HCI Studies
+
+### Intentmaking and Sensemaking: Human Interaction with AI-Guided Mathematical Discovery (2026)
+- **arXiv:** [2605.05921](https://arxiv.org/abs/2605.05921)
+- **Authors:** Bäuerle, Connors, Novikov, Wagner, Vũ, Viegas, Wattenberg, Dixon (Google DeepMind)
+- **Scope:** Formative user study with 11 expert mathematicians using AlphaEvolve. Identifies an "intentmaking" workflow -- iteratively discovering, defining, and refining experimental goals through system interaction. Proposes design implications for AI-for-science tools that move beyond the question/answer model.
+- **Year:** 2026
+
+### ResearchEVO: End-to-End Algorithm Evolution + Documentation (2026)
+- **arXiv:** [2604.05587](https://arxiv.org/abs/2604.05587)
+- **Scope:** Bi-dimensional co-evolution (logic + architecture) coupled with sentence-level RAG paper writing. Demonstrated on Quantum Error Correction (real Google quantum hardware data) and Physics-Informed Neural Networks; produces compilable LaTeX with zero fabricated citations.
+- **Year:** 2026
+
+### Rethinking Code Similarity for Automated Algorithm Design with LLMs (2026)
+- **arXiv:** [2603.02787](https://arxiv.org/abs/2603.02787)
+- **Scope:** Proposes BehaveSim, an algorithmic-similarity measure based on problem-solving trajectories (DTW alignment of intermediate solutions). Integrating into FunSearch/EoH promotes behavioral diversity and improves LLM-AAD across three AAD tasks.
+- **Year:** 2026
+
 ## Foundational Papers
 
 These papers established the core concepts:
