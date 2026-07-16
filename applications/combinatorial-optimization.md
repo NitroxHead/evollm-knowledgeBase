@@ -99,6 +99,22 @@ Papers where LLM+evolution methods designed heuristics for NP-hard optimization 
 
 ---
 
+## Multi-Objective Bayesian Optimization (LLaMEA-MOBO)
+
+**Problem:** Automatically design complete multi-objective Bayesian optimization (MOBO) algorithms -- a task where the many interdependent design choices normally demand deep expert tuning.
+
+| Metric | Result | Reference |
+|---|---|---|
+| Synthetic suite (ZDT/DTLZ/WFG, 12 problems) | Best generated algorithm reaches **0.971** mean normalized hypervolume vs 0.869 for qParEGO, at ~**60x** less wall-clock time | arXiv:2607.08791 |
+| Per-problem significance | Significantly better than qParEGO on 7/12; never worse | -- |
+| Real-world engineering (3 unseen RE problems) | **0.985** vs 0.971 for qParEGO, at ~**3.4x** lower cost | -- |
+
+Extends [LLaMEA](../projects/llamea.md) to MOBO, using the LLM as mutation/crossover operator within an evolutionary strategy, with SMAC hyperparameter optimization inside the loop (~900 algorithms generated across 9 runs).
+
+**Paper:** Laskaris, Brasher, van Stein, Raponi, Bäck, Neukart, "LLM-Driven Evolutionary Generation of Multi-Objective Bayesian Optimization Algorithms," arXiv:[2607.08791](https://arxiv.org/abs/2607.08791), 2026.
+
+---
+
 ## 2026 LLM-AHD Framework Wave
 
 A large family of LLM-based Automated Heuristic Design (LLM-AHD) frameworks appeared in early 2026, each targeting a different limitation of the prior generation (EoH, ReEvo, FunSearch). Most evaluate on the same TSP / Online BPP / CVRP / FJSP / MIS substrate.
@@ -116,8 +132,9 @@ A large family of LLM-based Automated Heuristic Design (LLM-AHD) frameworks appe
 | **DSevolve** | Quality-diverse rule portfolio for dynamic shop-floor scheduling | arXiv:[2603.27628](https://arxiv.org/abs/2603.27628) |
 | **CoupleEvo** | Coupled-subproblem heuristic evolution | arXiv:[2605.06341](https://arxiv.org/abs/2605.06341) |
 | **Teacher-Aware Evolution** | Uses RL-trained policy as behavioral teacher for heuristic search | arXiv:[2605.10634](https://arxiv.org/abs/2605.10634) |
+| **QDEvo** | Multi-objective Quality-Diversity: unbounded archive keyed by code embeddings + hierarchical self-reflection; fights mode collapse | arXiv:[2607.11916](https://arxiv.org/abs/2607.11916) |
 
-**Trend:** The field has converged on multi-agent / multi-stage / tool-using designs as the next step beyond single-loop FunSearch/EoH-style evolution. **BEAM** stands out for producing a heuristic that outperforms KaMIS, a long-standing SOTA Maximum Independent Set solver.
+**Trend:** The field has converged on multi-agent / multi-stage / tool-using designs as the next step beyond single-loop FunSearch/EoH-style evolution. **BEAM** stands out for producing a heuristic that outperforms KaMIS, a long-standing SOTA Maximum Independent Set solver. **QDEvo** attacks a recurring pathology of LLM heuristic search -- mode collapse into homogeneous populations -- by pairing Quality-Diversity with pre-trained code embeddings, and reports gains in both Hypervolume and Inverted Generational Distance over prior SOTA.
 
 ---
 
@@ -145,3 +162,4 @@ A large family of LLM-based Automated Heuristic Design (LLM-AHD) frameworks appe
 | Job Shop | LLM4EO | Meta-evolution of operators |
 | Hash Code | EvoTune | Surpassed top human score |
 | BBOB | LLaMEA | Beat CMA-ES and DE; Silver Humies Award |
+| Multi-objective BO | LLaMEA-MOBO | Beats qParEGO at ~60x lower cost (synthetic) |

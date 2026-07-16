@@ -104,6 +104,20 @@ AlphaEvolve discovered a complex 19-variable gadget that established the new bou
 
 ---
 
+## Tensor Network Contraction Order (OpenEvolve)
+
+**Problem:** Optimize the contraction ordering for tensor networks -- an NP-hard problem central to quantum simulation and many-body physics.
+
+| Aspect | Finding |
+|---|---|
+| Method | Verifier-guided evolutionary coding via [OpenEvolve](../projects/openevolve.md) |
+| Case study focus | Sensitivity to LLM choice, evaluation metric, and test-instance selection |
+| Takeaway | Demonstrates the promise of evolutionary coding agents for algorithm development while underscoring that evaluation, validation, and human interpretation remain the bottleneck |
+
+**Paper:** Hoppe, Röhrig-Zöllner, Knechtges, "Algorithmic algorithm development with LLMs: A Case Study on LLM-Usage for Contraction Order Optimization in Tensor Networks," arXiv:[2606.01975](https://arxiv.org/abs/2606.01975), 2026.
+
+---
+
 ## FlashAttention Kernel Optimization
 
 **Problem:** Optimize the FlashAttention kernel implementation in Transformer models.
