@@ -61,7 +61,8 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
 │   ├── scientific-discovery.md        # Materials, drug discovery, photonics
 │   ├── robotics-and-rl.md    #   Reward design, robot morphology
 │   ├── neural-architecture-search.md  # NAS, model merging, alignment
-│   └── competitive-programming.md     # ICFP, Hash Code, AtCoder, SWE-bench
+│   ├── competitive-programming.md     # ICFP, Hash Code, AtCoder, SWE-bench
+│   └── finance.md              #   Quantitative trading strategy optimization
 │
 ├── taxonomy/                 # Classification and conceptual frameworks
 │   ├── overview.md           #   Three integration directions
@@ -93,6 +94,7 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
 | Robotics & RL | Pen spinning, reward design (83% beat human experts), walking robots | [applications/robotics-and-rl.md](applications/robotics-and-rl.md) |
 | Neural Architecture Search | SOTA on 21/30 algorithmic reasoning tasks, model merging | [applications/neural-architecture-search.md](applications/neural-architecture-search.md) |
 | Competitive Programming | 1st place ICFP 2025, beat Hash Code top human score | [applications/competitive-programming.md](applications/competitive-programming.md) |
+| Finance & Quant Trading | Verifier-guided strategy optimization (Sharpe -0.3 → 0.54) | [applications/finance.md](applications/finance.md) |
 
 ### Methods & Tools (How do they work?)
 
