@@ -39,3 +39,4 @@ This project is unique in evolving **models** rather than programs or prompts. I
 
 - [ShinkaEvolve](shinkaevolve.md) -- Same organization, evolving programs
 - [Darwin Godel Machine](darwin-godel-machine.md) -- Same organization, self-improving agents
+- [Darwin Family](../applications/neural-architecture-search.md#training-free-evolutionary-model-merging-darwin-family) (2026) -- Extends training-free evolutionary merging with a 14-dim merge genome, diagnostic MRI-Trust fusion, and cross-architecture (Transformer + Mamba) breeding

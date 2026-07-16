@@ -133,8 +133,27 @@ A large family of LLM-based Automated Heuristic Design (LLM-AHD) frameworks appe
 | **CoupleEvo** | Coupled-subproblem heuristic evolution | arXiv:[2605.06341](https://arxiv.org/abs/2605.06341) |
 | **Teacher-Aware Evolution** | Uses RL-trained policy as behavioral teacher for heuristic search | arXiv:[2605.10634](https://arxiv.org/abs/2605.10634) |
 | **QDEvo** | Multi-objective Quality-Diversity: unbounded archive keyed by code embeddings + hierarchical self-reflection; fights mode collapse | arXiv:[2607.11916](https://arxiv.org/abs/2607.11916) |
+| **MeEvo** | Cyclically couples Natural Evolution (code crossover/mutation) with Metacognitive Evolution (reflection over reasoning traces); lower variance on constrained tasks | arXiv:[2606.14202](https://arxiv.org/abs/2606.14202) |
+| **RAISE** | Robust AHD: an LLM-free inner loop searches worst-case adversarial instances so heuristics survive distribution shift (prior methods degrade up to 19x) | arXiv:[2606.31801](https://arxiv.org/abs/2606.31801) |
+| **SeaEvo** | Strategy-space layer that turns natural-language strategy into persistent population-level state; +20.6% avg across four systems benchmarks | arXiv:[2604.24372](https://arxiv.org/abs/2604.24372) |
 
-**Trend:** The field has converged on multi-agent / multi-stage / tool-using designs as the next step beyond single-loop FunSearch/EoH-style evolution. **BEAM** stands out for producing a heuristic that outperforms KaMIS, a long-standing SOTA Maximum Independent Set solver. **QDEvo** attacks a recurring pathology of LLM heuristic search -- mode collapse into homogeneous populations -- by pairing Quality-Diversity with pre-trained code embeddings, and reports gains in both Hypervolume and Inverted Generational Distance over prior SOTA.
+**Trend:** The field has converged on multi-agent / multi-stage / tool-using designs as the next step beyond single-loop FunSearch/EoH-style evolution. **BEAM** stands out for producing a heuristic that outperforms KaMIS, a long-standing SOTA Maximum Independent Set solver. **QDEvo** attacks a recurring pathology of LLM heuristic search -- mode collapse into homogeneous populations -- by pairing Quality-Diversity with pre-trained code embeddings, and reports gains in both Hypervolume and Inverted Generational Distance over prior SOTA. A second sub-trend targets **what the search preserves and how robust it is**: **SeaEvo** keeps natural-language strategy as first-class population state (beyond transient mutation context), while **RAISE** hardens evolved heuristics against distribution shift via adversarial instance search, and **MeEvo** fuses reflection-based and population-based evolution.
+
+---
+
+## Online Inventory Policies (InvEvolve)
+
+**Problem:** Generate inventory-control policies for online settings with **non-stationary demand** -- a dynamic setting where AlphaEvolve-style evolution (strong on static, structured problems) is not directly suited.
+
+**Approach:** InvEvolve is an end-to-end inventory-policy evolution and inference framework grounded in **confidence-interval-based certification**. Built on an LLM trained via RL, it processes demand data together with numerical and textual features and emits **white-box** policies carrying statistical safety guarantees.
+
+| Aspect | Result |
+|---|---|
+| Theory | Lower bound on the probability of evolving a statistically safe *and* improved policy; characterizes the multi-period gap vs an oracle-safe benchmark |
+| Synthetic + real retail data | Outperforms classical inventory policies and deep-learning methods |
+| Canonical settings | New policies beat existing benchmarks |
+
+**Paper:** Huang, Lin, Tang, Jiang, Jiang, Wang, Wei, "InvEvolve: Evolving White-Box Inventory Policies via Large Language Models with Performance Guarantees," arXiv:[2605.00369](https://arxiv.org/abs/2605.00369), 2026.
 
 ---
 

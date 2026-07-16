@@ -25,8 +25,46 @@ Papers where LLM+evolution methods designed, optimized, or repaired financial st
 
 ---
 
+## Algorithmic Trading Program Evolution (AlgoEvolve)
+
+**Problem:** Extend LLM-as-semantic-mutation-operator program evolution from static coding benchmarks to algorithmic trading -- a domain that is noisy, non-stationary, and highly discontinuous.
+
+**Approach:** AlgoEvolve generates, evaluates, and iteratively improves executable Python trading strategies under a rigorous testing protocol. A **meta-evolutionary outer loop** evolves the prompts guiding program synthesis in the inner loop, discovering improved search heuristics.
+
+| Observation | Result |
+|---|---|
+| Strategy logic | Emergent **regime-adaptive** behavior, including autonomous shifts in trading rules |
+| Meta-evolved prompts | Consistently outperform initial human-designed instructions; balance exploration/exploitation and reduce zero-trade failures |
+
+**Paper:** Sharma, Shroff, "AlgoEvolve: LLM-driven Meta-evolution of Algorithmic Trading Programs," arXiv:[2606.26173](https://arxiv.org/abs/2606.26173), 2026.
+
+**Method:** LLM semantic program evolution with a prompt-evolving meta-loop, in the spirit of [AlphaEvolve](../projects/alphaevolve.md). See also [ReEvo](../projects/reevo.md) for reflective heuristic evolution.
+
+---
+
+## Bitcoin Trading System Evolution (MadEvolve)
+
+**Problem:** Apply LLM-driven algorithm optimization to core quantitative-finance tasks -- feature/signal generation, strategy-component tuning, and end-to-end pipeline design -- on Bitcoin trading.
+
+**Approach:** MadEvolve is a general-purpose AlphaEvolve-inspired optimization framework (originally built for computational cosmology) applied here to algorithmic trading and alpha generation.
+
+| Task | Result |
+|---|---|
+| Evolving feature sets for signal generation | Significant backtest improvement |
+| Optimizing separate trading-strategy components | Significant improvement |
+| Jointly evolving feature pipeline + execution strategy | Significant improvement |
+| Rigor | Compared against agentic search (Claude Code); explicitly evaluates p-hacking probability on the simulation setup |
+
+**Paper:** Kvasiuk, Li, Colegrove, Münchmeyer, "MadEvolve: Evolutionary Optimization of Trading Systems with Large Language Models," arXiv:[2605.23007](https://arxiv.org/abs/2605.23007), 2026.
+
+**Method:** AlphaEvolve-inspired general-purpose algorithm evolution.
+
+---
+
 ## Summary
 
 | Problem | Method | Key Achievement |
 |---|---|---|
 | Quant trading (A-share + Crypto) | EVOQUANT | Avg Sharpe -0.298 → 0.538; verifier guards against drift/overfitting |
+| Algorithmic trading programs | AlgoEvolve | Emergent regime-adaptive strategies; prompt-evolving meta-loop |
+| Bitcoin trading systems | MadEvolve | Improves feature/signal/execution pipelines; audits p-hacking |

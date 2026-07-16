@@ -162,6 +162,22 @@ AlphaEvolve modified compiler-generated IR code to achieve these speedups.
 
 ---
 
+## Domain-Independent Heuristics for Symbolic AI Planning
+
+**Problem:** Heuristic search is the dominant paradigm in symbolic AI planning, and the strongest heuristics are the product of decades of expert work. Prior LLM work produced heuristics for *individual* domains only -- none worked on arbitrary planning tasks.
+
+**Approach:** An LLM mutates parent heuristics written in **C++**; candidates are stored in a **MAP-Elites archive** keyed on informedness and speed, with fitness blending coverage and solving time. The evolved programs are plain C++ that slot into existing planners as drop-in replacements, inheriting soundness/completeness guarantees.
+
+| Result | Detail |
+|---|---|
+| First LLM-generated **domain-independent** heuristics to exceed the hand-engineered SOTA | On unseen test domains, the best evolved heuristic solves more tasks than the strongest baseline |
+| Pareto frontier | Full evolved suite spans the informedness-speed tradeoff |
+| Notable finding | Seeding from the *trivial blind* heuristic outperforms seeding from the strong FF heuristic; LLM reasoning effort affects compile rate more than quality of compiling candidates |
+
+**Paper:** Gestrin, Seipp, "LLM-Evolved Domain-Independent Heuristics for Symbolic AI Planning," arXiv:[2605.29649](https://arxiv.org/abs/2605.29649), 2026.
+
+---
+
 ## Summary
 
 | Problem | Method | Key Achievement |
@@ -174,3 +190,4 @@ AlphaEvolve modified compiler-generated IR code to achieve these speedups.
 | TPU design | AlphaEvolve | Optimized circuits in production hardware |
 | MARL (CFR/PSRO) | AlphaEvolve | 4 new algorithms competitive with SOTA, 2 distilled minimal solvers |
 | Lexical IR | RankEvolve | New ranking algorithms outperforming BM25 on BEIR/BRIGHT |
+| Symbolic AI planning | MAP-Elites + LLM (C++) | First domain-independent heuristics beating hand-engineered SOTA |
