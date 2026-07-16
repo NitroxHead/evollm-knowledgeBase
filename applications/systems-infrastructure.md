@@ -161,6 +161,50 @@ AlphaEvolve modified compiler-generated IR code.
 
 ---
 
+## GPU Kernel Optimization (Kernel Foundry)
+
+**Problem:** Generate GPU kernels that are simultaneously **correct** and **hardware-efficient** -- LLMs alone often produce one or the other.
+
+**Approach:** Kernel Foundry is a diagnosis-driven evolutionary framework combining expert-guided, retrieval-augmented initialization with **multi-island** evolutionary search. Candidate kernels are refined via structured diagnostic feedback; a centralized experience library accumulates reusable optimization knowledge, with explicit anti-cheating mechanisms that prevent bypassing kernel-level computation.
+
+| Benchmark | Result |
+|---|---|
+| KernelBench | Consistently improves correctness and performance over strong baselines; **up to 100% correctness on Level 2** |
+
+**Paper:** Huang, Chen, Huang, Yin, Li, Zhen, Yuan, Shao, "Kernel Foundry: A Diagnosis-driven Evolutionary Kernel Optimizer with Multi-Experts," arXiv:[2605.30359](https://arxiv.org/abs/2605.30359), 2026.
+
+---
+
+## Logic Synthesis Technology Mapping (MappingEvolve)
+
+**Problem:** Technology mapping is a critical, difficult logic-synthesis stage. Prior LLM work generated optimization *scripts* but left the core mapping algorithm untouched.
+
+**Approach:** MappingEvolve directly **evolves the technology-mapping code**, abstracting the process into optimization operators and using a hierarchical agent architecture (Planner / Evolver / Evaluator) to guide the search.
+
+| Metric | Result |
+|---|---|
+| Area reduction vs ABC | **10.04%** |
+| Area reduction vs mockturtle | **7.93%** |
+| Overall improvement on EPFL benchmarks | **46.6%–96.0%** S_overall, while navigating the area–delay tradeoff |
+
+**Paper:** Fu, Liu, Xu, Ho, "MappingEvolve: LLM-Driven Code Evolution for Technology Mapping," arXiv:[2604.26591](https://arxiv.org/abs/2604.26591), 2026. Repository: [Flians/MappingEvolve](https://github.com/Flians/MappingEvolve).
+
+---
+
+## Approximate Circuit Design (Prompt-Circuit Co-Evolution)
+
+**Problem:** Design 8-bit **approximate multipliers** that trade accuracy for power/area/latency -- valuable for error-resilient workloads such as neural networks.
+
+**Approach:** A co-evolutionary algorithm that simultaneously evolves a population of candidate circuits **and** a population of prompt templates steering the LLM's modifications, using an off-the-shelf LLM with no domain-specific training.
+
+| Comparison | Result |
+|---|---|
+| vs highly optimized EvoApproxLib circuits | Improved error-area trade-offs across several target objectives |
+
+**Paper:** Tomasovic, Sekanina, "Multi-Objective Coevolution of Prompts and Templates for Circuit Approximation," arXiv:[2606.13089](https://arxiv.org/abs/2606.13089), 2026.
+
+---
+
 ## Summary
 
 | System | Method | Impact | Status |
@@ -176,5 +220,8 @@ AlphaEvolve modified compiler-generated IR code.
 | Radar power allocation | AlphaEvolve | 1000x speedup, near-optimal | Research |
 | Enterprise Java hotspots | CodeEvolve (Salesforce) | 15.22x speedup avg | Research |
 | Chip macro placement order | OrderPlace | 14-34% wirelength reduction | Research |
+| GPU kernels | Kernel Foundry | Up to 100% correctness on KernelBench L2 | Research |
+| Technology mapping | MappingEvolve | 7.9-10% area reduction vs ABC/mockturtle | Research |
+| Approximate multipliers | Prompt-circuit co-evolution | Better error-area trade-offs vs EvoApproxLib | Research |
 
 **Note:** The "Barbarians at the Gate" paper (arXiv:2510.06189) is particularly notable for demonstrating that OpenEvolve can achieve significant systems optimizations for < $10 in LLM API costs.

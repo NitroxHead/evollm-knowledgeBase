@@ -153,6 +153,38 @@ Papers where LLM+evolution methods contributed to materials science, chemistry, 
 
 ---
 
+## Symbolic Regression with Programmatic Context
+
+**Problem:** LLM-based evolutionary symbolic regression typically feeds back only a scalar metric (e.g. MSE), discarding the rich structure in the dataset itself.
+
+**Approach:** An LLM-based evolutionary search framework that enables **code-based interactions with the dataset** -- the LLM actively performs data analysis and extracts informative signals beyond aggregated evaluation scores, then uses them to guide mutation.
+
+| Benchmark | Result |
+|---|---|
+| LLM-SRBench and related advanced SR benchmarks | Superior efficiency and accuracy vs strong baselines |
+
+**Paper:** Liu, Yang, Sehgal, Wang, Guo, Li, Yue, "Programmatic Context Augmentation for LLM-based Symbolic Regression," arXiv:[2605.03101](https://arxiv.org/abs/2605.03101), 2026.
+
+**Note:** Complements [GAE](#symbolic-regression-via-rl-optimized-evolution-gae) (structure-aware embeddings + RL-directed evolution) as another axis for enriching LLM feedback in SR.
+
+---
+
+## Quantum Error-Correcting Codes (Structured Concept Evolution)
+
+**Problem:** Discover quantum low-density parity-check (qLDPC) code families -- a challenging discrete design problem central to scalable quantum error correction.
+
+**Approach:** Structured Concept Evolution (SCE) pairs an LLM with a **structured algebraic mutation grammar**. Rather than asking the LLM to design codes from first principles, SCE evolves "structured concepts" -- algebraic specifications paired with executable programs -- via hierarchical mutations that modify the group algebra, protograph geometry, or base space.
+
+| Result | Detail |
+|---|---|
+| Discovered code families | Diverse lifted-product (CSS qLDPC) families, from abelian to **non-abelian** constructions beyond standard bivariate-bicycle designs |
+| Characterization | Under code-capacity depolarizing noise with BP+OSD decoding |
+| Models | Lightweight (GPT-5.4-mini, GPT-5.4-nano) |
+
+**Paper:** Liu, Marquardt, "Large-Language-Model Discovery of Quantum LDPC Codes through Structured Concept Evolution," arXiv:[2606.24808](https://arxiv.org/abs/2606.24808), 2026.
+
+---
+
 ## Critical Finding: Does LLM Evolution Actually Compound? (PTB-Search)
 
 **Problem:** Audit whether the generate → select → feed-back loop truly compounds discovery in **scientific equation discovery**, where finite samples make structure underdetermined.
@@ -199,4 +231,6 @@ Papers where LLM+evolution methods contributed to materials science, chemistry, 
 | Cosmology | CMBEvolve / CosmoEvolve | Autonomous ACT DR6 data analysis |
 | Scientific imaging | CVEvolve | Zero-code algorithm discovery for x-ray microscopy |
 | Symbolic regression | GAE | SOTA OOD via GNN + RL-directed evolution |
+| Symbolic regression (data-aware) | Programmatic Context Augmentation | Beats baselines on LLM-SRBench via code-based data analysis |
+| Quantum LDPC codes | Structured Concept Evolution | Discovers non-abelian qLDPC families via algebraic mutation grammar |
 | Equation discovery (audit) | PTB-Search | Shows evolution ≈ fresh sampling; set-level selection wins |

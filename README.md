@@ -62,7 +62,8 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
 │   ├── robotics-and-rl.md    #   Reward design, robot morphology
 │   ├── neural-architecture-search.md  # NAS, model merging, alignment
 │   ├── competitive-programming.md     # ICFP, Hash Code, AtCoder, SWE-bench
-│   └── finance.md              #   Quantitative trading strategy optimization
+│   ├── finance.md              #   Quantitative trading strategy optimization
+│   └── healthcare-and-medicine.md     # Clinical decision pipelines
 │
 ├── taxonomy/                 # Classification and conceptual frameworks
 │   ├── overview.md           #   Three integration directions
@@ -94,7 +95,8 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
 | Robotics & RL | Pen spinning, reward design (83% beat human experts), walking robots | [applications/robotics-and-rl.md](applications/robotics-and-rl.md) |
 | Neural Architecture Search | SOTA on 21/30 algorithmic reasoning tasks, model merging | [applications/neural-architecture-search.md](applications/neural-architecture-search.md) |
 | Competitive Programming | 1st place ICFP 2025, beat Hash Code top human score | [applications/competitive-programming.md](applications/competitive-programming.md) |
-| Finance & Quant Trading | Verifier-guided strategy optimization (Sharpe -0.3 → 0.54) | [applications/finance.md](applications/finance.md) |
+| Finance & Quant Trading | Verifier-guided strategy optimization (Sharpe -0.3 → 0.54), evolved trading programs | [applications/finance.md](applications/finance.md) |
+| Healthcare & Medicine | Clinical triage accuracy 77% → 87%, interpretable decision pipelines | [applications/healthcare-and-medicine.md](applications/healthcare-and-medicine.md) |
 
 ### Methods & Tools (How do they work?)
 
@@ -200,8 +202,11 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
   │   ── MARL discovery ─── 4 new CFR/PSRO algorithms via AlphaEvolve
   │   ── MLEvolve (Shanghai AI Lab) ─── SOTA MLE-Bench via graph search; beats AlphaEvolve on math
   │   ── FAMOU (Baidu) ─── Co-evolution wins AAMAS 2026 adversarial-game competition
-  │   ── LLaMEA-MOBO / QDEvo / GAE ─── Algorithm-design and heuristic-QD advances
+  │   ── LLaMEA-MOBO / QDEvo / GAE / MeEvo / RAISE / SeaEvo ─── Algorithm-design and heuristic-QD advances
   │   ── "Dictionaries, Not Darwin" ─── Critical audit: evolution ≈ fresh sampling in equation discovery
+  │   ── Darwin Family / EvoPref / Evolution Fine-Tuning ─── Evolution turns on the LLM itself (merging, alignment, mid-training)
+  │   ── AlgoEvolve / MadEvolve ─── Evolved trading programs; new EDA results (Kernel Foundry, MappingEvolve)
+  │   ── LLM-Guided Evolution (medical) / SCE (quantum LDPC codes) ─── New healthcare and quantum-EC domains
 ```
 
 ## Contributing
