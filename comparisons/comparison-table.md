@@ -26,6 +26,8 @@
 | [EvoX](../projects/evox.md) | UC Berkeley | 2026 | Solutions + search strategy (meta) | Co-evolution | Any | -- | arXiv |
 | [LEVI](../projects/levi.md) | Independent | 2026 | Code / prompts | Diversity-first + mutation routing | Mix of small + large | Yes | arXiv |
 | [CodeEvolve (Salesforce)](../projects/code-evolve.md) | Salesforce | 2026 | Java / Apex code | OpenEvolve + MCTS | Any | -- | arXiv |
+| [MLEvolve](../projects/mlevolve.md) | Shanghai AI Lab | 2026 | ML pipelines + algorithms (code) | Progressive MCGS (graph search) | Gemini | Yes | arXiv |
+| [FAMOU](../projects/famou.md) | Baidu | 2026 | Game strategies (code) | Co-evolution (adversarial) | Any | Yes | arXiv |
 
 ## By Scale of Impact
 
@@ -39,6 +41,8 @@
 2. **AlphaEvolve** -- Improved on Strassen's algorithm after 56 years
 3. **ShinkaEvolve** -- Won ICFP 2025 Programming Contest
 4. **EvoX** -- First framework to outperform AlphaEvolve / OpenEvolve / GEPA / ShinkaEvolve on the majority of ~200 tasks via meta-evolution
+5. **MLEvolve** -- SOTA on MLE-Bench in half the runtime; beats AlphaEvolve on math optimization tasks
+6. **FAMOU** -- 1st place (hardware) at the AAMAS 2026 MCTF adversarial-game competition
 
 ### Framework / Tool Impact
 1. **OpenEvolve** -- Most accessible open implementation of AlphaEvolve

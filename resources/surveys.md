@@ -32,6 +32,21 @@
 - **Scope:** Focused specifically on heuristic generation
 - **Year:** 2024
 
+## Adjacent Surveys: Self-Improving Agents (2026)
+
+These survey the broader "self-evolving / self-improving agent" literature, of which LLM+evolution code-evolution frameworks are one branch.
+
+### Recursive Self-Improvement in AI: From Bounded Self-Refinement to Autonomous Research Loops (2026)
+- **arXiv:** [2607.07663](https://arxiv.org/abs/2607.07663)
+- **Scope:** Surveys 1,250 arXiv papers (2024-2026) along two axes -- *what* the system improves (deployment behavior, policy, evaluator, or the research process) and the degree of loop closure. Separates convergent "bounded self-refinement" from open-ended recursive self-improvement, and orders self-evaluation signals into a verification hierarchy (formal verifiers strongest → intrinsic self-assessment weakest). Directly relevant framing for where evolutionary loops sit.
+- **Year:** 2026
+
+### Self-Improvements in Modern Agentic Systems: A Survey (2026)
+- **arXiv:** [2607.13104](https://arxiv.org/abs/2607.13104)
+- **Authors:** Ren, Chen, Guo et al. (incl. Mingchen Zhuge, Jürgen Schmidhuber)
+- **Scope:** Frames a modern agent as a foundation model coupled to an operational scaffold (prompts, memory, tools, control logic) and formalizes self-improvement as a self-induced update operator over parameters or scaffold. Organizes prior work by update target and driving signal. Companion list: [awesome-Self-Improving-Agents](https://github.com/selfimproving-agent/awesome-Self-Improving-Agents).
+- **Year:** 2026
+
 ## Curated Resource Lists
 
 ### LLM4EC GitHub Repository

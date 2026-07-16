@@ -128,6 +128,23 @@ AlphaEvolve modified compiler-generated IR code.
 
 ---
 
+## Chip Macro Placement Ordering (OrderPlace)
+
+**Problem:** Discover macro *placement-order* strategies for chip physical design -- the temporal sequencing of placement, previously governed by static hand-crafted heuristics (area- or connectivity-based), while ML has focused only on spatial coordinates.
+
+| Metric | Result |
+|---|---|
+| Wirelength reduction vs WireMask-EA | **34.04%** |
+| Wirelength reduction vs SOTA EGPlace | **14.08%** |
+| Benchmark | ISPD 2005 |
+| Efficiency trick | Lightweight deterministic greedy "proxy probe" filters candidate orderings cheaply |
+
+**Method:** OrderPlace -- proxy-guided LLM evolution over code-level ordering policies (static scoring metrics through dynamic physics-inspired mechanisms).
+
+**Paper:** Mo, Liu, Xu, Wu, "Order Matters: Unveiling the Hidden Impact of Macro Placement Sequences via Proxy-Guided LLM Evolution," arXiv:[2606.08904](https://arxiv.org/abs/2606.08904), 2026.
+
+---
+
 ## TPU Hardware Design
 
 **Problem:** Optimize Verilog arithmetic circuits for TPU matrix multiplication units.
@@ -158,5 +175,6 @@ AlphaEvolve modified compiler-generated IR code.
 | Cache replacement (ArchAgent) | AlphaEvolve | 5.3% IPC speedup | Research |
 | Radar power allocation | AlphaEvolve | 1000x speedup, near-optimal | Research |
 | Enterprise Java hotspots | CodeEvolve (Salesforce) | 15.22x speedup avg | Research |
+| Chip macro placement order | OrderPlace | 14-34% wirelength reduction | Research |
 
 **Note:** The "Barbarians at the Gate" paper (arXiv:2510.06189) is particularly notable for demonstrating that OpenEvolve can achieve significant systems optimizations for < $10 in LLM API costs.

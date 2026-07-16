@@ -137,6 +137,40 @@ Papers where LLM+evolution methods contributed to materials science, chemistry, 
 
 ---
 
+## Symbolic Regression via RL-Optimized Evolution (GAE)
+
+**Problem:** Discover closed-form physical equations for complex nonlinear oscillator systems via LLM-guided evolutionary program search.
+
+| Component | Contribution |
+|---|---|
+| Relational GNN | Parses programs into typed computation graphs → structure-aware embeddings |
+| RL meta-controller | Replaces blind parent/mutation sampling with a directed policy trained on reward history |
+| Online GRPO fine-tuning | Updates the LLM mutation operator at test time using group-normalized rewards |
+
+**Result:** GAE (Graph-Augmented Evolution) consistently matches or outperforms static LLM-driven baselines and achieves **state-of-the-art out-of-distribution** performance on nonlinear-oscillator symbolic regression.
+
+**Paper:** Chen, Cheng, "GAE: Graph-Augmented Evolution for Scientific Discovery via Reinforcement Optimization," arXiv:[2607.10127](https://arxiv.org/abs/2607.10127), 2026.
+
+---
+
+## Critical Finding: Does LLM Evolution Actually Compound? (PTB-Search)
+
+**Problem:** Audit whether the generate → select → feed-back loop truly compounds discovery in **scientific equation discovery**, where finite samples make structure underdetermined.
+
+| Observation | Result |
+|---|---|
+| Parent-conditioned evolution vs fresh independent sampling (matched call budget) | Statistically indistinguishable (median OOD NMSE 0.045 vs 0.049) |
+| Instructed multi-parent crossover | *Worse* than independent sampling |
+| Predictor of final success | Initial proposal quality, not iteration |
+| Proposed fix (PTB-Search) | Sample once, extract a per-problem term dictionary, then **set-level sparse selection** |
+| LLM-SRBench (239-problem split) | **73.2%** Acc₀.₁ (Llama-3.1-8B), **77.0%** (DeepSeek-V4 anchor) vs 49.2% best baseline, at ~1/10 the call budget |
+
+**Takeaway:** In this setting, the LLM is best understood as a *supplier of candidate terms*; the discovery is carried by external set-level selection, not by the evolutionary loop itself. An important calibration on where LLM+evolution does and does not add value.
+
+**Paper:** Li, "Dictionaries, Not Darwin: Set-Level Selection Beats LLM Evolution in Scientific Equation Discovery," arXiv:[2607.04108](https://arxiv.org/abs/2607.04108), 2026.
+
+---
+
 ## Autonomous Scientific Discovery (AI Scientist)
 
 **Problem:** Fully automated open-ended scientific research.
@@ -164,3 +198,5 @@ Papers where LLM+evolution methods contributed to materials science, chemistry, 
 | CFD turbulence modeling | AI CFD Scientist | 7.89% Cf RMSE reduction, vision-language gates |
 | Cosmology | CMBEvolve / CosmoEvolve | Autonomous ACT DR6 data analysis |
 | Scientific imaging | CVEvolve | Zero-code algorithm discovery for x-ray microscopy |
+| Symbolic regression | GAE | SOTA OOD via GNN + RL-directed evolution |
+| Equation discovery (audit) | PTB-Search | Shows evolution ≈ fresh sampling; set-level selection wins |

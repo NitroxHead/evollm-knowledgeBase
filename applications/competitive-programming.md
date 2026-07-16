@@ -113,11 +113,31 @@ ShinkaEvolve optimized the Rust code of their SAT encoding, enabling solutions t
 
 ---
 
+## AAMAS 2026 MCTF Competition -- 1st Place (Hardware)
+
+**Problem:** 3v3 maritime capture-the-flag (MCTF), an adversarial multi-agent game with a shifting evaluation landscape.
+
+| Metric | Result |
+|---|---|
+| Hardware round-robin | **1st place** |
+| Simulation round | 3rd place |
+| Combined score (MCTF 2026 benchmark) | **0.526** (best of all methods) |
+| Generalization to unseen opponents | **61.7% win rate** |
+| Emergent tactics | Lookahead search, adaptive interception (absent from seed strategies) |
+
+FAMOU adds evaluator co-evolution, hierarchical deep evaluation, and weakness pressure to the OpenEvolve/ShinkaEvolve code-evolution paradigm, outperforming both as baselines.
+
+**Method:** [FAMOU](../projects/famou.md)
+**Paper:** Li et al., "Beyond Static Evaluation: Co-Evolutionary Mechanisms for LLM-Driven Strategy Evolution in Adversarial Games," arXiv:[2606.10389](https://arxiv.org/abs/2606.10389), 2026.
+
+---
+
 ## Summary
 
 | Contest/Benchmark | Method | Achievement |
 |---|---|---|
 | ICFP 2025 | ShinkaEvolve | 1st place, 10x speedup |
+| AAMAS 2026 MCTF | FAMOU | 1st place (hardware), adversarial-game code evolution |
 | Google Hash Code | EvoTune | Beat top human score (418 vs 407) |
 | AtCoder (ALE-Bench) | ShinkaEvolve | Would achieve 2nd place |
 | AIME 2024 | ShinkaEvolve | Evolved effective reasoning architecture |

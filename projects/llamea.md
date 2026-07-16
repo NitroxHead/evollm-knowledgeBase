@@ -22,6 +22,14 @@ LLaMEA (Large Language Model Evolutionary Algorithm) automates the design of met
 - Won the **Silver Humies Award at GECCO 2025** for human-competitive results
 - Demonstrated that LLMs can design optimization algorithms from scratch
 
+## Extensions
+
+The LLaMEA framework has been specialized to several algorithm-design domains:
+
+- **LLaMEA-BO** -- generates Bayesian optimization algorithms; outperforms SOTA BO baselines on 19/24 BBOB functions (5D). arXiv:[2505.21034](https://arxiv.org/abs/2505.21034). See [Scientific Discovery](../applications/scientific-discovery.md).
+- **LLaMEA-MOBO** (2026) -- generates complete **multi-objective** Bayesian optimization algorithms; matches/exceeds qParEGO hypervolume at ~60x lower wall-clock cost on synthetic suites and generalizes to unseen engineering problems. arXiv:[2607.08791](https://arxiv.org/abs/2607.08791). See [Combinatorial Optimization](../applications/combinatorial-optimization.md).
+- **Photonic structure design** -- LLaMEA with domain-focused prompts matches quasi-oppositional DE on optical inverse design. arXiv:[2503.19742](https://arxiv.org/abs/2503.19742).
+
 ## Paper
 
 **"LLaMEA: A Large Language Model Evolutionary Algorithm for Automatically Generating Metaheuristics"**

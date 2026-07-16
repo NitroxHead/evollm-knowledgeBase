@@ -27,7 +27,7 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
 ```
 .
 ├── README.md
-├── projects/                 # Methods & tools (22 profiles)
+├── projects/                 # Methods & tools (24 profiles)
 │   ├── alphaevolve.md        #   Google DeepMind
 │   ├── funsearch.md          #   Google DeepMind
 │   ├── elm.md                #   OpenAI (foundational)
@@ -49,7 +49,9 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
 │   ├── gepa.md               #   UC Berkeley / Stanford (prompt evolution)
 │   ├── evox.md               #   UC Berkeley (meta-evolution)
 │   ├── levi.md               #   Independent (sample-efficient)
-│   └── code-evolve.md        #   Salesforce (multi-language code optimization)
+│   ├── code-evolve.md        #   Salesforce (multi-language code optimization)
+│   ├── mlevolve.md           #   Shanghai AI Lab (self-evolving MLE / algorithm discovery)
+│   └── famou.md              #   Baidu (adversarial-game strategy evolution)
 │
 ├── applications/             # Applied results by domain (30+ papers)
 │   ├── mathematics.md        #   Cap sets, matrix mult, kissing number, packing...
@@ -104,6 +106,8 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
 | NVIDIA | [Eureka](projects/eureka.md) |
 | UC Berkeley / Stanford | [GEPA](projects/gepa.md), [EvoX](projects/evox.md) |
 | Salesforce | [CodeEvolve](projects/code-evolve.md) |
+| Shanghai AI Lab | [MLEvolve](projects/mlevolve.md) |
+| Baidu | [FAMOU](projects/famou.md) |
 | Academia | [ReEvo](projects/reevo.md), [EvoPrompt](projects/evoprompt.md), [EoH](projects/eoh.md), [LLMatic](projects/llmatic.md), [LLaMEA](projects/llamea.md), [EvoPrompting](projects/evoprompting.md) |
 | Community / Independent | [OpenEvolve](projects/openevolve.md), [LEVI](projects/levi.md) |
 
@@ -111,7 +115,7 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
 
 | Category | Projects |
 |---|---|
-| Programs / Algorithms | [AlphaEvolve](projects/alphaevolve.md), [FunSearch](projects/funsearch.md), [ShinkaEvolve](projects/shinkaevolve.md), [ELM](projects/elm.md), [LLaMEA](projects/llamea.md), [EoH](projects/eoh.md), [CodeEvolve](projects/code-evolve.md), [LEVI](projects/levi.md) |
+| Programs / Algorithms | [AlphaEvolve](projects/alphaevolve.md), [FunSearch](projects/funsearch.md), [ShinkaEvolve](projects/shinkaevolve.md), [ELM](projects/elm.md), [LLaMEA](projects/llamea.md), [EoH](projects/eoh.md), [CodeEvolve](projects/code-evolve.md), [LEVI](projects/levi.md), [MLEvolve](projects/mlevolve.md), [FAMOU](projects/famou.md) |
 | Heuristics for Optimization | [ReEvo](projects/reevo.md), [EoH](projects/eoh.md) |
 | Text Prompts | [EvoPrompt](projects/evoprompt.md), [Promptbreeder](projects/promptbreeder.md), [OPRO](projects/opro.md), [GEPA](projects/gepa.md) |
 | Neural Architectures | [EvoPrompting](projects/evoprompting.md), [LLMatic](projects/llmatic.md) |
@@ -152,6 +156,8 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
 | Outperforms AlphaEvolve/OpenEvolve/GEPA/ShinkaEvolve on majority of ~200 tasks | EvoX | 2026 |
 | 35x cost reduction vs frontier-LLM frameworks | LEVI | 2026 |
 | GEPA outperforms GRPO (RL) on 6 tasks with 35x fewer rollouts | GEPA | 2025 |
+| SOTA on MLE-Bench in half the runtime; beats AlphaEvolve on math tasks | MLEvolve | 2026 |
+| 1st place (hardware) at AAMAS 2026 MCTF adversarial-game competition | FAMOU | 2026 |
 
 ## Timeline
 
@@ -190,6 +196,10 @@ LLM-based evolution replaces traditional genetic operators (random mutation, syn
   │   ── Salesforce CodeEvolve ─── 15x speedup on enterprise Java hotspots
   │   ── AI CFD Scientist / CMBEvolve / CVEvolve ─── New scientific-discovery domains
   │   ── MARL discovery ─── 4 new CFR/PSRO algorithms via AlphaEvolve
+  │   ── MLEvolve (Shanghai AI Lab) ─── SOTA MLE-Bench via graph search; beats AlphaEvolve on math
+  │   ── FAMOU (Baidu) ─── Co-evolution wins AAMAS 2026 adversarial-game competition
+  │   ── LLaMEA-MOBO / QDEvo / GAE ─── Algorithm-design and heuristic-QD advances
+  │   ── "Dictionaries, Not Darwin" ─── Critical audit: evolution ≈ fresh sampling in equation discovery
 ```
 
 ## Contributing
